@@ -1,4 +1,12 @@
 <p>This is the partial for view 2.</p>
+
+ <div class="container" >
+            <h4>loop through cars using ng-repeat</h4>
+            <ul>
+                <li ng-repeat="car in cars"> {{car.make}} {{car.model}} {{car.year}} {{car.price}}</li>
+            </ul>
+        </div>
+
 <p>
   Showing of 'interpolate' filter:
   {{ 'Current version is v%VERSION%.' | interpolate }}
