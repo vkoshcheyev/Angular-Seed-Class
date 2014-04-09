@@ -5,17 +5,17 @@
  <div class="container" >
  
 <table id="listOfCarsTable" border="1" style="width:500px" >
-<tr>
+<tr id="listOfCarsTableHeaderRow">
   <th>Make</th>
   <th>Model</th>
   <th>Year</th>
   <th>Price</th>
 </tr>
-<tr ng-repeat="car in cars">
-  <td>{{car.make}}</td>
-  <td>{{car.model}}</td>
-  <td>{{car.year}}</td>
-  <td>{{car.price}}</td>
+<tr id="listOfCarsTableRow" ng-repeat="car in cars">
+  <td id="carMakeColumn">{{car.make}}</td>
+  <td id="carModelColumn">{{car.model}}</td>
+  <td id="carYearColumn">{{car.year}}</td>
+  <td id="carPriceColumn">{{car.price}}</td>
 </tr>
 </table>
  

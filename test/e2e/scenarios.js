@@ -129,12 +129,16 @@ describe('my app', function() {
         toMatch(/partial for view 2/);
     });
 
-    it('should have a list of cars', function() {
+    it('should have a list of cars and should have the correct number of rows', function() {
 	  htmlElement = element(by.id('listOfCarsTable'));
       expect(htmlElement).not.toBe(undefined);
+      expect(element.all(by.repeater('car in cars')).count()).toEqual(3);
     });
-	
-	/*expect(element.all(by.repeater('car in cars')).count()).toEqual(1);*/
+
+    it('should have "Honda" as the make in the first row', function() {
+	  htmlElement = element(by.id('carMakeColumn'));
+      expect(htmlElement.getText()).toEqual('Honda');
+    });
 	
   });
 });
